@@ -1,28 +1,30 @@
+import os
+
+def limpar_tela():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 perguntas = [
-    "Nome",
-    "Profissão/Formação",
-    "Primeiro Adjetivo (para a turma)",
-    "Segundo Adjetivo (para o instrutor)",
-    "Primeira Comida",
-    "Segunda Comida/Bebida",
-    "Um Sentimento"
+    "Nome", "Profissão/Formação", "Primeiro Adjetivo", 
+    "Segundo Adjetivo", "Primeira Comida", "Segunda Comida/Bebida", "Sentimento"
 ]
 
 respostas = []
 
-print("--- Jogo do Texto Maluco (Generation Brasil) ---\n")
-
 for item in perguntas:
+    limpar_tela()
+    print("--- Jogo do Texto Maluco (Generation Brasil) ---\n")
     resposta = input(f"Digite um(a) {item}: ")
     respostas.append(resposta)
 
-historia = (
-    f"\n{respostas[0]} começou hoje o seu primeiro curso na Generation Brasil.\n"
-    f"Está cursando a formação em {respostas[1]}.\n"
-    f"Achou a sua turma muito {respostas[2]} mas o instrutor era, no mínimo, {respostas[3]}.\n"
-    f"No almoço, comeu {respostas[4]} e {respostas[5]} enquanto revisava as suas anotações.\n"
-    f"Ao final do dia, sente-se {respostas[6]}, mas tem a determinação de concluir a jornada."
-)
+limpar_tela()
 
-print("\n--- História ---")
+historia = """
+{} começou hoje o seu primeiro curso na Generation Brasil.
+Está cursando a formação em {}.
+Achou a sua turma muito {} mas o instrutor era, no mínimo, {}.
+No almoço, comeu {} e {} enquanto revisava as suas anotações.
+Ao final do dia, sente-se {}, mas tem a determinação de concluir a jornada.
+""".format(*respostas)
+
+print("--- História ---")
 print(historia)
