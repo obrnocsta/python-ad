@@ -1,5 +1,5 @@
 
-**Guia Rápido de Git: Comandos Essenciais, Boas Práticas e Soluções**
+## Guia Rápido de Git: Comandos Essenciais, Boas Práticas e Soluções
 
 Este guia prático reúne os passos iniciais de configuração, comandos mais utilizados no dia a dia com o Git, boas práticas para manter seu histórico limpo e as soluções para os problemas mais comuns.
 
@@ -11,16 +11,16 @@ Configurando o Git pela primeira vez
 
 Abra o seu terminal e execute os comandos abaixo substituindo pelos seus dados:
 bash
-# Define o seu nome de usuário globalmente
+**Define o seu nome de usuário globalmente**
 git config --global user.name "Seu Nome Completo"
 
-# Define o seu e-mail globalmente (use o mesmo e-mail da sua conta do GitHub/GitLab)
+**Define o seu e-mail globalmente (use o mesmo e-mail da sua conta do GitHub/GitLab)**
 git config --global user.email "seu@email.com"
 
-# [Recomendável] Define a branch padrão para 'main' (o padrão antigo era 'master')
+**[Recomendável] Define a branch padrão para 'main' (o padrão antigo era 'master')**
 git config --global init.defaultBranch main
 
-# [Recomendável] Ativa o realce de cores no terminal para facilitar a leitura
+**[Recomendável] Ativa o realce de cores no terminal para facilitar a leitura**
 git config --global color.ui auto
 Use o código com cuidado.
 Para verificar se as configurações foram salvas corretamente, você pode listar as configurações ativas com o comando git config --list.
