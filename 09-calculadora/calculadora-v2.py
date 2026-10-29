@@ -71,7 +71,6 @@ def calcular(operacao):
                 return
             resultado /= n
 
-    # Formatação amigável do resultado
     if resultado.is_integer():
         res_formatado = int(resultado)
     else:
@@ -79,7 +78,6 @@ def calcular(operacao):
 
     exibir_mensagem(f"Resultado final: {res_formatado}", FRENTE_VERDE_CLARO)
 
-# Loop Principal
 opcao = ""
 while opcao != "5":
     menu()
